@@ -1,0 +1,6 @@
+j main 
+main:
+    lw x4 x0 0 
+    lw x5 x0 1 
+    lw x6 x0 2 
+    sw x6 x0 3 

@@ -1,0 +1,154 @@
+
+j main 
+
+
+wait:
+    // waiting led
+    set x29 1 
+
+    // Wait for the start switch
+    // Switches 01: start reverb, 11: start normal
+    set x6 1 
+    set x7 3 
+
+    comp x30 x6 
+    jeq reverb 
+    comp x30 x7 
+    jeq normal 
+    j wait 
+
+reverb:
+    // reverb led
+    set x29 2 
+
+    // n = 0
+    set x8 0 
+
+reverb_loop:
+    // offset of 3 bytes (data size)
+    addi x9 x8 3 
+    // x[n]
+    lw x10 x9 0 
+    
+
+    // y[n] = (1 - alpha) * x[n]
+    mul x11 x2 x10 
+    sari x11 x11 8 
+
+    // offset to result file
+    add x9 x9 x5 
+
+    // check if n >= k 
+    comp x8 x3 
+    jlt skip1 
+
+    // y[n] += alpha * y[n - k]
+    sub x10 x9 x3 
+    lw x10 x10 0 
+    mul x10 x10 x1 
+    sari x10 x10 8 
+    add x11 x11 x10 
+skip1:
+    // stores result value
+    sw x11 x9 0 
+
+    // n++
+    addi x8 x8 1 
+
+    // n < size 
+    comp x8 x4 
+    jlt reverb_loop 
+    comp x8 x4 
+    jge finished 
+
+normal:
+    // normal led
+    set x29 4 
+
+    // n = 0
+    set x8 0 
+
+    // 1/(1-alpha)
+    set x13 640 
+
+normal_loop:
+    // offset of 3 bytes (data size)
+    addi x9 x8 3 
+    // x[n]
+    add x12 x9 x4 
+
+    // y = x[n]
+    lw x11 x12 0 
+
+    // check if n >= k 
+    comp x8 x3 
+    jlt skip2 
+    
+    // y[n] -= alpha * x[n - k]
+    sub x10 x12 x3 
+    lw x10 x10 0 
+    mul x10 x10 x1 
+    sari x10 x10 8 
+    sub x11 x11 x10 
+skip2:
+    // y[n] =  (1/(1-alpha))*(x[n] - alpha * x[n - k])
+    mul x11 x11 x13 
+    sari x11 x11 8 
+    // offset to result file
+    add x15 x9 x5 
+    sw x11 x15 0 
+
+    // n++
+    addi x8 x8 1 
+
+    // n < size 
+    comp x8 x4 
+    jlt normal_loop 
+    comp x8 x4 
+    jge finished 
+
+finished:
+    // turn on leds
+    set x29 255 
+
+    // Wait for the switches
+    // Switches 00/10: back to wait
+    set x6 0 
+    set x7 2 
+
+    comp x30 x6 
+    jeq wait 
+    comp x30 x7 
+    jeq wait 
+    comp x30 x7 
+    jneq finished 
+
+main:
+    // turn off leds
+    set x29 0 
+
+    // Constants
+    // alpha
+    set x1 153 
+    // 1 - alpha  
+    set x2 102 
+    // k
+    set x3 11025 
+
+    // File size saved in x4 (also base address for reverb file)
+    lw x4 x0 0 
+    lw x5 x0 1 
+    lw x6 x0 2 
+    slli x4 x4 24 
+    slli x5 x5 24 
+    slli x6 x6 24 
+    slri x4 x4 24 
+    slri x5 x5 16 
+    slri x6 x6 8 
+    add x4 x4 x5 
+    add x4 x4 x6 
+
+    // Result file address
+    muli x5 x4 2 
+
+    j wait 
