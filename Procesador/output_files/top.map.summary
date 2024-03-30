@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu Mar 28 17:53:53 2024
-Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Elaboration Status : Successful - Sat Mar 30 14:57:05 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : top
-Top-level Entity Name : top
+Top-level Entity Name : RegV
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
