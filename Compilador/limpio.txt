@@ -4,3 +4,9 @@ main:
     lw x5 x0 1 
     lw x6 x0 2 
     sw x6 x0 3 
+    mvv x6 x0 x4 
+    svr x6 x0 x4 
+    svl x8 x9 x10 
+    sva x11 x12 x13 
+    lv x15 x16 0 
+    sv x17 x18 0 
