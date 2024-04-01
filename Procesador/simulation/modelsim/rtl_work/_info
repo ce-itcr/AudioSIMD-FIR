@@ -7,56 +7,527 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/simulation/modelsim
-vRegV
+Z0 dC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/simulation/modelsim
+vadder
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1711832320
+Z2 !s110 1711955093
 !i10b 1
-!s100 GBi1zL:5fH:P_QT>>jGzK1
-IfNO0>VE:L[Sf2gQB;K<o>1
+!s100 mKSgACg:2S7l;zdhf:>::1
+IjB]<9o16chW2iW6z4T<B>2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 RegV_sv_unit
+!s105 adder_sv_unit
 S1
 R0
-w1711566861
-8C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV.sv
-FC:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV.sv
+Z4 w1711954876
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1711832320.000000
-!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV.sv|
+Z6 !s108 1711955093.000000
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador
-Z8 tCvgOpt 0
-n@reg@v
-vRegV_tb
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador
+Z9 tCvgOpt 0
+valu
+R1
+Z10 !s110 1711955094
+!i10b 1
+!s100 Uk5h?zD78LKz5PD>KM[Ik2
+I=]C<JE@Eo[Po6X`<8l:ES3
+R3
+!s105 alu_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z11 !s108 1711955094.000000
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv|
+!i113 1
+R7
+R8
+R9
+vconditional
 R1
 R2
 !i10b 1
-!s100 CFjZY6`:^DG<fJVL=l]ao1
-IFA_c1>ZH<A4925L]3ck663
+!s100 Yz?dkF]YIRWL8UW^z:OiQ0
+IXaV_MblGN2N1095N=X]bN3
 R3
-!s105 RegV_tb_sv_unit
+!s105 conditional_sv_unit
 S1
 R0
-w1711565861
-8C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV_tb.sv
-FC:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV_tb.sv
-L0 1
 R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv
+L0 1
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR/Procesador/RegV_tb.sv|
-!i113 1
 R6
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv|
+!i113 1
 R7
 R8
-n@reg@v_tb
+R9
+vcontroller
+R1
+R2
+!i10b 1
+!s100 R]AoTXj3]<^;QBDE>[QZB2
+IjVajc2X^;Wfd>;Yo7H3oU1
+R3
+!s105 controller_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv|
+!i113 1
+R7
+R8
+R9
+vdatapath
+R1
+R2
+!i10b 1
+!s100 k>V=0R:9?QIKaU]E[`7ma2
+IE>B29ZDbaiVM[a[THA9Z43
+R3
+!s105 datapath_sv_unit
+S1
+R0
+w1711950848
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv|
+!i113 1
+R7
+R8
+R9
+veqcmp
+R1
+Z12 !s110 1711955095
+!i10b 1
+!s100 A@JSf575HcXS@0INHc@=D0
+IPSd^Xz4kLSCZG01mm^`0:3
+R3
+!s105 eqcmp_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z13 !s108 1711955095.000000
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv|
+!i113 1
+R7
+R8
+R9
+vextend
+R1
+R10
+!i10b 1
+!s100 JC=Kh>EM?D@bLfNzL?kWn0
+IZiPkln0S_n9I;E_hXL;841
+R3
+!s105 extend_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv|
+!i113 1
+R7
+R8
+R9
+vflopenr
+R1
+R10
+!i10b 1
+!s100 K[Dhl7L;W1b<fdMZ`bm?E3
+I0U<W;eaGMboLR;klaFZMz3
+R3
+!s105 flopenr_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv|
+!i113 1
+R7
+R8
+R9
+vflopenrc
+R1
+R12
+!i10b 1
+!s100 LV^zkVfYKKczXCH>]FaKb2
+I6F0H00HIHD=o@XdXkS^Nd1
+R3
+!s105 flopenrc_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv|
+!i113 1
+R7
+R8
+R9
+vflopr
+R1
+R10
+!i10b 1
+!s100 GV<NSjC8B7Roh4DKleAhM1
+I@A?<0_U1`BL1]OQkTG[QD3
+R3
+!s105 flopr_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv|
+!i113 1
+R7
+R8
+R9
+vfloprc
+R1
+R12
+!i10b 1
+!s100 g2>]V<MccZM1MeNC3=IIo1
+ISIIK[zl<@WzW[8g`3<bi]0
+R3
+!s105 floprc_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv|
+!i113 1
+R7
+R8
+R9
+vhazard
+R1
+R10
+!i10b 1
+!s100 4QK?d5hg28O^I<;YeeTBU0
+I6MGYh8U5:BN<OKT[3LFZ;1
+R3
+!s105 hazard_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv|
+!i113 1
+R7
+R8
+R9
+vimem
+R1
+R12
+!i10b 1
+!s100 [b_L@:R3b`anWLT6UYRk`3
+IGi4:=Gc<H^d^2^J]di<961
+R3
+!s105 imem_sv_unit
+S1
+R0
+w1711955040
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv|
+!i113 1
+R7
+R8
+R9
+vinstVecOrScalar
+R1
+R12
+!i10b 1
+!s100 k0c1liTMlnBDB:Qg>?V<n0
+IEjGB4nE3<Omngh1>je[QG2
+R3
+!s105 instvecorscalar_sv_unit
+S1
+R0
+w1711950532
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv|
+!i113 1
+R7
+R8
+R9
+ninst@vec@or@scalar
+vmux2
+R1
+R12
+!i10b 1
+!s100 c?Y[`1W_=2V?X?^];Vl9N0
+IoMT3k01[SD4a0jXNPmSn;3
+R3
+!s105 mux2_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv|
+!i113 1
+R7
+R8
+R9
+vmux3
+R1
+R12
+!i10b 1
+!s100 hSQOGC39A9?oa?[l?Y:991
+IV_XcBR[X8W[PeHLP9c>dc0
+R3
+!s105 mux3_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv|
+!i113 1
+R7
+R8
+R9
+vprocessor
+R1
+R2
+!i10b 1
+!s100 PSRGS28_zAjPHM[PQ68J?1
+ID1P4Rm[mB]fVGQk6TKY^T1
+R3
+!s105 processor_sv_unit
+S1
+R0
+w1711950707
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv|
+!i113 1
+R7
+R8
+R9
+vramvectorial
+R2
+!i10b 1
+!s100 Zd`e3<aId_`I:11CH2Llh1
+IF8hb3Lkagg?Q5IHi`]j361
+R3
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v
+L0 40
+R5
+r1
+!s85 0
+31
+!s108 1711955092.000000
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador
+R9
+vregfile
+R1
+R10
+!i10b 1
+!s100 g?<?bbBPXQk4eAbWZUeF=3
+IU?FKKHnjFYM<o29^G>6Zi0
+R3
+!s105 regfile_sv_unit
+S1
+R0
+R4
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv|
+!i113 1
+R7
+R8
+R9
+vtestbench
+R1
+R12
+!i10b 1
+!s100 mh8z;2cj0<HPlFIailjBS2
+Ifh>Ok5=;E8Le>;9RM_CcT1
+R3
+!s105 testbench_sv_unit
+S1
+R0
+Z14 w1711954878
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv|
+!i113 1
+R7
+R8
+R9
+vtop
+R1
+R2
+!i10b 1
+!s100 NMZ1FZj[nVz7h[]7QGMK71
+IYGL`oG`LBPea_]W4BKkCj3
+R3
+!s105 top_sv_unit
+S1
+R0
+R14
+8C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv
+FC:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador|C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv|
+!i113 1
+R7
+R8
+R9

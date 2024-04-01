@@ -11,11 +11,17 @@ module processor(	input logic clk, reset,
 	logic [3:0] ALUControlE;
 	logic ALUSrcE, BranchTakenE, MemtoRegW, PCSrcW, RegWriteW;
 	logic [3:0] ALUFlagsE;
-	logic [31:0] InstrD;
+	logic [31:0] InstrFRes, InstrFResV;
+	logic [31:0] InstrD, InstrDV;
 	logic RegWriteM, MemtoRegE, PCWrPendingF;
 	logic [1:0] ForwardAE, ForwardBE;
 	logic StallF, StallD, FlushD, FlushE;
 	logic Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E;
+	
+	instVecOrScalar i(.InstSelec(InstrF[28]),
+					 .Inst(InstrF),
+					 .InstS(InstrFRes),
+					 .InstV(InstrFResV));
 	
 	controller c(clk, reset, InstrD[31:29], InstrD[28:25], InstrD[24:20], ALUFlagsE,
 						RegSrcD, ImmSrcD,
@@ -29,7 +35,7 @@ module processor(	input logic clk, reset,
 					RegSrcD, ImmSrcD,
 					ALUSrcE, BranchTakenE, ALUControlE,
 					MemtoRegW, PCSrcW, RegWriteW,
-					PCF, InstrF, InstrD,
+					PCF, InstrFRes, InstrFResV, InstrD, InstrDV,
 					ALUOutE, WriteDataE, ReadDataM,
 					ALUFlagsE,
 					Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E,

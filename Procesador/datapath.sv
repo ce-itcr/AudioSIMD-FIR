@@ -4,8 +4,8 @@ module datapath(	input logic clk, reset,
 						input logic [3:0] ALUControlE,
 						input logic MemtoRegW, PCSrcW, RegWriteW,
 						output logic [31:0] PCF,
-						input logic [31:0] InstrF,
-						output logic [31:0] InstrD,
+						input logic [31:0] InstrF, InstrFV,
+						output logic [31:0] InstrD, InstrDV,
 						output logic [31:0] ALUResultE, WriteDataE,
 						input logic [31:0] ReadDataM,
 						output logic [3:0] ALUFlagsE,
@@ -53,6 +53,8 @@ module datapath(	input logic clk, reset,
 	assign PCPlus8D = PCPlus4F; // skip register
 	
 	flopenrc #(32) instrreg(clk, reset, ~StallD, FlushD, InstrF, InstrD);
+	flopenrc #(32) instrregV(clk, reset, ~StallD, FlushD, InstrFV, InstrDV);
+
 	
 	mux2 #(5) ra1_mux(InstrD[19:15], // Rs
 							5'b11111, 		// 31  (PC+8)
