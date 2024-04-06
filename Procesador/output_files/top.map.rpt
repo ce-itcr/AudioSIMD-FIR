@@ -1,5 +1,5 @@
 Analysis & Elaboration report for top
-Fri Apr 05 19:30:01 2024
+Fri Apr 05 21:27:13 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -70,20 +70,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  62. Analysis & Elaboration Settings
  63. Port Connectivity Checks: "ramvectorial:data_mem"
  64. Port Connectivity Checks: "processor:m_processor|datapath:dp|flopr:WriteDataE_M"
- 65. Port Connectivity Checks: "processor:m_processor|datapath:dp|arr2bits:a2b_alu"
- 66. Port Connectivity Checks: "processor:m_processor|datapath:dp|alu_vect_2:aluv"
- 67. Port Connectivity Checks: "processor:m_processor|datapath:dp|flopr:rd2d_eV"
- 68. Port Connectivity Checks: "processor:m_processor|datapath:dp|flopr:rd1d_eV"
- 69. Port Connectivity Checks: "processor:m_processor|datapath:dp|mux2:ra1_mux"
- 70. Port Connectivity Checks: "processor:m_processor|datapath:dp|adder:pcadd"
- 71. Port Connectivity Checks: "processor:m_processor|datapath:dp"
- 72. Port Connectivity Checks: "processor:m_processor|controllerV:cv|flopr:regsM"
- 73. Port Connectivity Checks: "processor:m_processor|controllerV:cv|floprc:flushedregsE"
- 74. Port Connectivity Checks: "processor:m_processor|controllerV:cv"
- 75. Port Connectivity Checks: "processor:m_processor|controller:c|flopr:regsM"
- 76. Port Connectivity Checks: "processor:m_processor"
- 77. Analysis & Elaboration Messages
- 78. Analysis & Elaboration Suppressed Messages
+ 65. Port Connectivity Checks: "processor:m_processor|datapath:dp|mux2:ra1_mux"
+ 66. Port Connectivity Checks: "processor:m_processor|datapath:dp|adder:pcadd"
+ 67. Port Connectivity Checks: "processor:m_processor|datapath:dp"
+ 68. Port Connectivity Checks: "processor:m_processor|controllerV:cv|flopr:regsM"
+ 69. Port Connectivity Checks: "processor:m_processor|controllerV:cv|floprc:flushedregsE"
+ 70. Port Connectivity Checks: "processor:m_processor|controllerV:cv"
+ 71. Port Connectivity Checks: "processor:m_processor|controller:c|flopr:regsM"
+ 72. Port Connectivity Checks: "processor:m_processor"
+ 73. Analysis & Elaboration Messages
+ 74. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -109,7 +105,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Apr 05 19:30:01 2024       ;
+; Analysis & Elaboration Status ; Successful - Fri Apr 05 21:27:13 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; top                                         ;
 ; Top-level Entity Name         ; top                                         ;
@@ -486,7 +482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                                      ;
+; WIDTH          ; 128   ; Signed Integer                                                      ;
 +----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -496,7 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                                      ;
+; WIDTH          ; 128   ; Signed Integer                                                      ;
 +----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -888,46 +884,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:m_processor|datapath:dp|arr2bits:a2b_alu" ;
-+------------------+-------+----------+------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                  ;
-+------------------+-------+----------+------------------------------------------+
-; alu_res[15..1]   ; Input ; Info     ; Stuck at GND                             ;
-; alu_res[0][7..1] ; Input ; Info     ; Stuck at GND                             ;
-+------------------+-------+----------+------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:m_processor|datapath:dp|alu_vect_2:aluv"                                              ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; result[0..14]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; result[15][7..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:m_processor|datapath:dp|flopr:rd2d_eV"                                                                                                                                     ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                              ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; d    ; Input  ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; q    ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (128 bits) it drives.  The 96 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:m_processor|datapath:dp|flopr:rd1d_eV"                                                                                                                                     ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                              ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; d    ; Input  ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; q    ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (128 bits) it drives.  The 96 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "processor:m_processor|datapath:dp|mux2:ra1_mux" ;
 +------+-------+----------+--------------------------------------------------+
@@ -1013,7 +969,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 05 19:29:40 2024
+    Info: Processing started: Fri Apr 05 21:26:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyecto_2 -c top --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1094,7 +1050,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_vec
     Info (12023): Found entity 1: alu_vect_2 File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_vect_2_tb.sv
     Info (12023): Found entity 1: alu_vect_2_tb File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2_tb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(134): created implicit net for "AluResE" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 134
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "processor" for hierarchy "processor:m_processor" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv Line: 23
 Warning (12125): Using design file instvecorscalar.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -1122,14 +1077,14 @@ Info (12128): Elaborating entity "RegV" for hierarchy "processor:m_processor|dat
 Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_e" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 105
 Info (12128): Elaborating entity "mux3" for hierarchy "processor:m_processor|datapath:dp|mux3:byp1mux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 115
 Info (12128): Elaborating entity "alu" for hierarchy "processor:m_processor|datapath:dp|alu:alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 120
+Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_eV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 127
 Info (12128): Elaborating entity "alu_vect_2" for hierarchy "processor:m_processor|datapath:dp|alu_vect_2:aluv" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 136
 Info (12128): Elaborating entity "arr2bits" for hierarchy "processor:m_processor|datapath:dp|arr2bits:a2b_alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 139
-Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:AluResult_regV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 154
 Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:Result_muxV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 173
 Info (12128): Elaborating entity "eqcmp" for hierarchy "processor:m_processor|datapath:dp|eqcmp:m0" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 179
 Info (12128): Elaborating entity "hazard" for hierarchy "processor:m_processor|hazard:h" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 64
 Info (12128): Elaborating entity "imem" for hierarchy "imem:instructions_mem" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv Line: 26
-Warning (10850): Verilog HDL warning at imem.sv(7): number of words (9) in memory file does not match the number of elements in the address range [0:264] File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 7
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (14) in memory file does not match the number of elements in the address range [0:264] File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 7
 Warning (10030): Net "ROM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
 Warning (10030): Net "ROM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
 Warning (10030): Net "ROM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
@@ -1180,13 +1135,13 @@ Info (12128): Elaborating entity "mux_ihb" for hierarchy "ramvectorial:data_mem|
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_lkb.tdf
     Info (12023): Found entity 1: mux_lkb File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/db/mux_lkb.tdf Line: 22
 Info (12128): Elaborating entity "mux_lkb" for hierarchy "ramvectorial:data_mem|altsyncram:altsyncram_component|altsyncram_9bt2:auto_generated|mux_lkb:mux5" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/db/altsyncram_9bt2.tdf Line: 55
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/output_files/top.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4937 megabytes
-    Info: Processing ended: Fri Apr 05 19:30:01 2024
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4953 megabytes
+    Info: Processing ended: Fri Apr 05 21:27:13 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:36
 
 
 +--------------------------------------------+

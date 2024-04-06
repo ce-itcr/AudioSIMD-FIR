@@ -87,6 +87,14 @@ def aritmetic(parameter):  # falta slr y sll
         inst = inst + "0100"
     if parameter[0].lower() == "sar":
         inst = inst + "0101"
+    if parameter[0].lower() == "mvv":
+        inst = inst + "1000"
+    if parameter[0].lower() == "svr":
+        inst = inst + "1001"
+    if parameter[0].lower() == "svl":
+        inst = inst + "1010"
+    if parameter[0].lower() == "sva":
+        inst = inst + "1011"
 
     inst = (
         inst
@@ -245,11 +253,15 @@ def memOp(parameter):
     inst = ""
     parameter = descomp(parameter, 1)
     if parameter[0].lower() == "lw":
-        inst = "100"
+        inst = "1000000"
     if parameter[0].lower() == "sw":
-        inst = inst + "101"
+        inst = "1010000"
 
-    inst += "0000"
+    if parameter[0].lower() == "lv":
+        inst = "1001000"
+    if parameter[0].lower() == "sv":
+        inst = "1011000"
+
     inst = (
         inst
         + str(decimal_a_binario(int(parameter[1]), 0))
@@ -279,6 +291,10 @@ def traslate(c_code):
             or command.lower() == "slr "
             or command.lower() == "sll "
             or command.lower() == "sar "
+            or command.lower() == "mvv "
+            or command.lower() == "svr "
+            or command.lower() == "svl "
+            or command.lower() == "sva "
         ):
             binario += aritmetic(line)
         elif (
@@ -301,7 +317,8 @@ def traslate(c_code):
             or command.lower() == "jle "
         ):
             binario += jumps(line)  # , addrlabel)
-        elif line[0:2].lower() == "lw" or line[0:2].lower() == "sw":
+        elif (line[0:2].lower() == "lw" or line[0:2].lower() == "sw" 
+              or line[0:2].lower() == "lv" or line[0:2].lower() == "sv"):
             binario += memOp(line)
     return binario
 
@@ -316,6 +333,10 @@ def traslateline(line, count):
         or command.lower() == "slr "
         or command.lower() == "sll "
         or command.lower() == "sar "
+        or command.lower() == "mvv "
+        or command.lower() == "svr "
+        or command.lower() == "svl "
+        or command.lower() == "sva "
     ):
         newline = aritmetic(line)
     elif (
@@ -340,7 +361,8 @@ def traslateline(line, count):
         or command.lower() == "jle "
     ):
         newline = jumps(line, count)
-    elif line[0:2].lower() == "lw" or line[0:2].lower() == "sw":
+    elif (line[0:2].lower() == "lw" or line[0:2].lower() == "sw"
+          or line[0:2].lower() == "lv" or line[0:2].lower() == "sv"):
         newline = memOp(line)
     return newline
 

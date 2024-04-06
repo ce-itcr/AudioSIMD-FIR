@@ -31,7 +31,7 @@ module datapath(	input logic clk, reset,
 	// Execute
 	logic [31:0] RD1E, RD2E, ExtImmE, ALUOutM, WriteDataM, SrcAE, SrcBE;
 	logic [4:0] RA1E, RA2E, WA3E, WA3EV;
-	logic [15:0][7:0] RD1EV, RD2EV, ALUResE;
+	logic [15:0][7:0] RD1EV, RD2EV, AluResE;
 	logic [127:0] AluResEBit, ALUOutMV;
 	
 	// Mem
@@ -124,8 +124,8 @@ module datapath(	input logic clk, reset,
 	flopr #(5) wa3d_eV(clk, reset, InstrDV[24:20], WA3EV);
 
 	
-	flopr #(32) rd1d_eV(clk, reset, RD1DV, RD1EV);
-	flopr #(32) rd2d_eV(clk, reset, RD2DV, RD2EV);
+	flopr #(128) rd1d_eV(clk, reset, RD1DV, RD1EV);
+	flopr #(128) rd2d_eV(clk, reset, RD2DV, RD2EV);
 	
 	alu_vect_2 #(8, 16) aluv(
         .a(RD1EV),
@@ -138,7 +138,7 @@ module datapath(	input logic clk, reset,
 	 arr2bits a2b_alu(.alu_res(AluResE),
 					      .bit_res(AluResEBit));
 					  
-	 arr2bits a2b_reg2(.alu_res(RD2DV),
+	 arr2bits a2b_reg2(.alu_res(RD2EV),
 							 .bit_res(data_b));
 	
 	

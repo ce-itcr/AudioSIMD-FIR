@@ -1,6 +1,15 @@
 j main 
 main:
     lw x4 x0 0 
-    lw x5 x0 1 
-    lw x6 x0 2 
-    sw x6 x0 3 
+    sw x4 x0 32 
+    addi x1 x1 0 
+    lv x1 x1 0 
+    lv x2 x1 1 
+    addi x1 x1 0 
+    addi x1 x1 0 
+    addi x1 x1 0 
+    mvv x3 x1 x2 
+    svr x4 x1 x2 
+    svl x5 x1 x2 
+    sva x6 x1 x2 
+    sv x3 x1 3 
