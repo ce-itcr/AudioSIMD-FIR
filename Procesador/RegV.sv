@@ -1,7 +1,7 @@
-module RegV #(parameter REGSIZE = 15,
+module RegV #(parameter REGSIZE = 16,
 									 parameter VECTORSPERREG = 16, 
 									 parameter DATAWIDTH = 8, 
-									 parameter REGSIZEINT = 4) (
+									 parameter REGSIZEINT = 5) (
    input logic clk, we3,
 	input logic [REGSIZEINT-1:0] ra1, ra2, ra3,
 	input logic [127:0] wd3,

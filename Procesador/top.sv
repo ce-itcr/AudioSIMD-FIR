@@ -13,15 +13,18 @@ module top(	input logic clk, reset,
 	processor m_processor(clk, reset, PCF,
 								instruction_f,
 								MemWriteE,
+								wren_b,
 								DataAdrE,
 								WriteDataE,
+								data_b,
 								ReadDataM,
+								q_b,
 								LEDs,
 								Switches);
 	
 	
 	imem instructions_mem(PCF, instruction_f);
 	
-	ramvectorial data_mem(DataAdrE[18:0], address_b, clk,  WriteDataE[7:0], data_b, MemWriteE, wren_b,  ReadDataM[7:0], q_b);
+	ramvectorial data_mem(DataAdrE[18:0], DataAdrE[18:0], clk,  WriteDataE[7:0], data_b, MemWriteE, wren_b,  ReadDataM[7:0], q_b);
 	
 endmodule

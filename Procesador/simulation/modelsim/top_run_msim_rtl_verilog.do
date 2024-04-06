@@ -6,6 +6,9 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/arr2bits.sv}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/RegV.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv}
@@ -23,6 +26,7 @@ vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv}
 
