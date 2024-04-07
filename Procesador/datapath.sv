@@ -16,7 +16,8 @@ module datapath(	input logic clk, reset,
 						input logic [1:0] ForwardAE, ForwardBE,
 						input logic StallF, StallD, FlushD,
 						output logic [7:0] LEDs,
-						input logic [2:0] Switches);
+						input logic [2:0] Switches,
+						input logic [2:0] Type);
 	
 	
 	// Fetch
@@ -78,7 +79,8 @@ module datapath(	input logic clk, reset,
 					WA3W, ResultW, PCPlus8D,
 					RD1D, RD2D,
 					LEDs,
-					Switches);
+					Switches,
+					Type);
 					
 	extend ext(InstrD[19:0], ImmSrcD, ExtImmD);
 

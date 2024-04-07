@@ -54,7 +54,8 @@ module processor(	input logic clk, reset,
 					Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E,
 					ForwardAE, ForwardBE, StallF, StallD, FlushD,
 					LEDs,
-					Switches);
+					Switches,
+					InstrFRes[31:29]);
 					
 	
 	hazard h(clk, reset, Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E,

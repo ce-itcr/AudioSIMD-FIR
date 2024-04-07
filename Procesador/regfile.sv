@@ -4,27 +4,45 @@ module regfile(input logic clk,
 					input logic [31:0] ResultW, PC_Plus8,
 					output logic [31:0] RD1D, RD2D,
 					output logic [7:0] LEDs,
-					input logic [2:0] Switches);
+					input logic [2:0] Switches,
+					input logic [2:0] Type);
 					
-	logic [31:0] registers[31:0];
+	logic [31:0] registers[31:0] = '{default: '0};
 	
 	assign LEDs = registers[29][7:0];
 	
-	
-	// register  0: 0
+	// register 0: 0
+	// register 26: Stalls counter
+	// register 27: Arithmetics op counter
+	// register 28: Memory op counter
 	// register	29: LEDs
 	// register	30: Switches
 	// register 31: PC+8
 	
-	
 	// write on falling edge
-	always_ff @(negedge clk)
+	always_ff @(negedge clk) begin
 		if (RegWriteW && 
 				(WA3W != 5'b00000) &&
 				(WA3W != 5'b11110)) begin
-			registers[WA3W] <= ResultW;
+			registers[WA3W] = ResultW;
 		end
+		//Performance counters
+		case(Type)
 		
+			//Arithmetic
+			
+			3'b000: registers[27] = registers[27] + 'b1;
+			
+			3'b001: registers[27] = registers[27] + 'b1;
+			
+			//Memory
+			3'b100: registers[28] = registers[28] + 'b1;
+			3'b101: registers[28] = registers[28] + 'b1;
+			
+			default: ; //NOP
+		
+		endcase
+	end
 	
 	// read registers
 	always_comb begin
@@ -44,5 +62,7 @@ module regfile(input logic clk,
 			default: RD2D = registers[RA2D];
 		endcase
 	end
+	
+	
 	
 endmodule
