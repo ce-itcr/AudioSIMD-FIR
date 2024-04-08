@@ -6,6 +6,7 @@ module top(	input logic clk, reset,
 	logic MemWriteE, wren_b;
 	logic [127:0] data_b, q_b;
 	logic [14:0] address_b;
+	logic [7:0] q_debug;
 	
 	assign ReadDataM[31:8] = {24{ReadDataM[7]}};
 	
@@ -24,7 +25,7 @@ module top(	input logic clk, reset,
 	
 	
 	imem instructions_mem(PCF, instruction_f);
-	
+	//ram ram_debug(DataAdrE[18:0], clk, WriteDataE[7:0], MemWriteE, q_debug);
 	ramvectorial data_mem(DataAdrE[18:0], DataAdrE[18:0], clk,  WriteDataE[7:0], data_b, MemWriteE, wren_b,  ReadDataM[7:0], q_b);
 	
 endmodule

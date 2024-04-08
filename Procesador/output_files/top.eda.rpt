@@ -1,5 +1,5 @@
 EDA Netlist Writer report for top
-Wed Mar 20 22:11:50 2024
+Mon Apr  8 17:07:01 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 20 22:11:50 2024 ;
+; EDA Netlist Writer Status ; Successful - Mon Apr  8 17:07:01 2024 ;
 ; Revision Name             ; top                                   ;
 ; Top-level Entity Name     ; top                                   ;
 ; Family                    ; Cyclone V                             ;
@@ -45,34 +45,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                          ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
-; Option                                                                                            ; Setting                  ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
-; Tool Name                                                                                         ; ModelSim (SystemVerilog) ;
-; Generate functional simulation netlist                                                            ; On                       ;
-; Truncate long hierarchy paths                                                                     ; Off                      ;
-; Map illegal HDL characters                                                                        ; Off                      ;
-; Flatten buses into individual nodes                                                               ; Off                      ;
-; Maintain hierarchy                                                                                ; Off                      ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                      ;
-; Enable glitch filtering                                                                           ; Off                      ;
-; Do not write top level VHDL entity                                                                ; Off                      ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                      ;
-; Architecture name in VHDL output netlist                                                          ; structure                ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                      ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                      ;
-+---------------------------------------------------------------------------------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                             ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Option                                                                                            ; Setting                     ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Tool Name                                                                                         ; Questa Intel FPGA (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                          ;
+; Truncate long hierarchy paths                                                                     ; Off                         ;
+; Map illegal HDL characters                                                                        ; Off                         ;
+; Flatten buses into individual nodes                                                               ; Off                         ;
+; Maintain hierarchy                                                                                ; Off                         ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                         ;
+; Enable glitch filtering                                                                           ; Off                         ;
+; Do not write top level VHDL entity                                                                ; Off                         ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                         ;
+; Architecture name in VHDL output netlist                                                          ; structure                   ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                         ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                         ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                   ;
-+------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                              ;
-+------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/XT/Desktop/sfallas_computer_architecture_1_2023_2-proyecto_2_v1.2/proyecto_2/Procesador/simulation/modelsim/top.svo ;
-+------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Simulation Generated Files                                            ;
++-----------------------------------------------------------------------+
+; Generated Files                                                       ;
++-----------------------------------------------------------------------+
+; C:/Users/XT/Desktop/AudioSIMD-FIR/Procesador/simulation/questa/top.vo ;
++-----------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Mar 20 22:11:48 2024
+    Info: Processing started: Mon Apr  8 17:07:00 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off proyecto_2 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file top.svo in folder "C:/Users/XT/Desktop/sfallas_computer_architecture_1_2023_2-proyecto_2_v1.2/proyecto_2/Procesador/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top.vo in folder "C:/Users/XT/Desktop/AudioSIMD-FIR/Procesador/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Wed Mar 20 22:11:50 2024
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4736 megabytes
+    Info: Processing ended: Mon Apr  8 17:07:01 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

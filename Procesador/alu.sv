@@ -16,6 +16,7 @@ module alu(	input int a, b,
 	always_comb
 		casex (ALUControl)
 			4'b000?: Result = sum[31:0];
+			4'b0001: Result = a - b;
 			4'b0010: Result = a * b;
 			4'b0011: Result = a >> shift;
 			4'b0100: Result = a << shift;
