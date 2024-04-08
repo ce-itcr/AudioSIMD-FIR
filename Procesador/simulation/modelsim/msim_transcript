@@ -12,279 +12,279 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v 
 # -- Compiling module ramvectorial
 # 
 # Top level modules:
 # 	ramvectorial
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/arr2bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/arr2bits.sv 
 # -- Compiling module arr2bits
 # 
 # Top level modules:
 # 	arr2bits
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv 
 # -- Compiling module controllerV
 # 
 # Top level modules:
 # 	controllerV
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/RegV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/RegV.sv 
 # -- Compiling module RegV
 # 
 # Top level modules:
 # 	RegV
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:37 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:37 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:32 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 23:05:32 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/conditional.sv 
 # -- Compiling module conditional
 # 
 # Top level modules:
 # 	conditional
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazard.sv 
 # -- Compiling module hazard
 # 
 # Top level modules:
 # 	hazard
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/extend.sv 
 # -- Compiling module extend
 # 
 # Top level modules:
 # 	extend
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenr.sv 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv 
 # -- Compiling module flopenrc
 # 
 # Top level modules:
 # 	flopenrc
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:38 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:38 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/floprc.sv 
 # -- Compiling module floprc
 # 
 # Top level modules:
 # 	floprc
-# End time: 23:05:33 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:33 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:01
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv 
 # -- Compiling module mux3
 # 
 # Top level modules:
 # 	mux3
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv 
 # -- Compiling module eqcmp
 # 
 # Top level modules:
 # 	eqcmp
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv 
 # -- Compiling module alu_vect_2
 # 
 # Top level modules:
 # 	alu_vect_2
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazardV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazardV.sv 
 # -- Compiling module hazardV
 # 
 # Top level modules:
 # 	hazardV
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/bits2arr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/bits2arr.sv 
 # -- Compiling module bits2arr
 # 
 # Top level modules:
 # 	bits2arr
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv 
 # -- Compiling module instVecOrScalar
 # 
 # Top level modules:
 # 	instVecOrScalar
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador" C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 23:05:34 on Apr 06,2024, Elapsed time: 0:00:00
+# End time: 20:47:39 on Apr 07,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 23:05:34 on Apr 06,2024
+# Start time: 20:47:39 on Apr 07,2024
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.top
@@ -317,9 +317,9 @@
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv(1).
+# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(74): [PCDPC] - Port size (1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv(1).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/instrregV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(96): [PCDPC] - Port size (1) does not match connection size (32) for port 's'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv(2).
+# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(98): [PCDPC] - Port size (1) does not match connection size (32) for port 's'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv(2).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/ra1_muxV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv
 # ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv(28): [PCDPC] - Port size (15) does not match connection size (19) for port 'address_b'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v(42).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/data_mem File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v
@@ -327,36 +327,27 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: XT  Hostname: DESKTOP-33JP4PC  ProcessID: 20132
-#           Attempting to use alternate WLF file "./wlftrq26d1".
+#           Attempting to use alternate WLF file "./wlftm9tr1k".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftrq26d1
+#           Using alternate file: ./wlftm9tr1k
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-restart -f
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/instrregV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(96): [PCDPC] - Port size (1) does not match connection size (32) for port 's'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/ra1_muxV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv(28): [PCDPC] - Port size (15) does not match connection size (19) for port 'address_b'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v(42).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/data_mem File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v
 add wave -position end  sim:/testbench/dut/m_processor/i/Inst
 add wave -position end  sim:/testbench/dut/m_processor/i/InstS
 add wave -position end  sim:/testbench/dut/m_processor/i/InstV
 add wave -position end  sim:/testbench/dut/data_b
 add wave -position end  sim:/testbench/dut/q_b
-add wave -position end  sim:/testbench/dut/wren_b
-add wave -position end  sim:/testbench/dut/DataAdrE
 add wave -position end  sim:/testbench/dut/m_processor/dp/rfv/vrf
 restart -f
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv(1).
+# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(74): [PCDPC] - Port size (1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv(1).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/instrregV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/flopenrc.sv
-# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(96): [PCDPC] - Port size (1) does not match connection size (32) for port 's'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv(2).
+# ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv(98): [PCDPC] - Port size (1) does not match connection size (32) for port 's'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv(2).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/m_processor/dp/ra1_muxV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux2.sv
 # ** Warning: (vsim-3015) C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv(28): [PCDPC] - Port size (15) does not match connection size (19) for port 'address_b'. The port definition is at: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v(42).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/data_mem File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/ramvectorial.v
 run 400
-# End time: 23:10:40 on Apr 06,2024, Elapsed time: 0:05:06
-# Errors: 0, Warnings: 11
+# End time: 20:49:19 on Apr 07,2024, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 8

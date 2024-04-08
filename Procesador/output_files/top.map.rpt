@@ -1,5 +1,5 @@
 Analysis & Elaboration report for top
-Sat Apr 06 23:02:00 2024
+Sun Apr 07 20:41:37 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -118,7 +118,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Apr 06 23:02:00 2024       ;
+; Analysis & Elaboration Status ; Successful - Sun Apr 07 20:41:37 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; top                                         ;
 ; Top-level Entity Name         ; top                                         ;
@@ -1111,7 +1111,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 06 23:01:40 2024
+    Info: Processing started: Sun Apr 07 20:41:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyecto_2 -c top --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1192,10 +1192,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_vec
     Info (12023): Found entity 1: alu_vect_2 File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_vect_2_tb.sv
     Info (12023): Found entity 1: alu_vect_2_tb File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_regfile.sv
+    Info (12023): Found entity 1: testbench_regfile File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench_regfile.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file hazardv.sv
     Info (12023): Found entity 1: hazardV File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazardV.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bits2arr.sv
     Info (12023): Found entity 1: bits2arr File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/bits2arr.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at testbench_regfile.sv(14): created implicit net for "PCPlus8D" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/testbench_regfile.sv Line: 14
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "processor" for hierarchy "processor:m_processor" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv Line: 23
 Warning (12125): Using design file instvecorscalar.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -1211,29 +1214,29 @@ Info (12128): Elaborating entity "controllerV" for hierarchy "processor:m_proces
 Warning (10036): Verilog HDL or VHDL warning at controllerV.sv(25): object "SetCondition" assigned a value but never read File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv Line: 25
 Info (12128): Elaborating entity "floprc" for hierarchy "processor:m_processor|controllerV:cv|floprc:flushedregsE" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv Line: 65
 Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|controllerV:cv|flopr:regsW" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/controllerV.sv Line: 89
-Info (12128): Elaborating entity "datapath" for hierarchy "processor:m_processor|datapath:dp" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 65
-Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:pcnextmux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 62
-Info (12128): Elaborating entity "flopenr" for hierarchy "processor:m_processor|datapath:dp|flopenr:pcreg" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 64
-Info (12128): Elaborating entity "adder" for hierarchy "processor:m_processor|datapath:dp|adder:pcadd" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 65
-Info (12128): Elaborating entity "flopenrc" for hierarchy "processor:m_processor|datapath:dp|flopenrc:instrreg" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 72
-Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:ra1_mux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 79
-Info (12128): Elaborating entity "regfile" for hierarchy "processor:m_processor|datapath:dp|regfile:rf" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 89
-Info (12128): Elaborating entity "extend" for hierarchy "processor:m_processor|datapath:dp|extend:ext" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 91
-Info (12128): Elaborating entity "RegV" for hierarchy "processor:m_processor|datapath:dp|RegV:rfv" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 115
-Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_e" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 119
-Info (12128): Elaborating entity "mux3" for hierarchy "processor:m_processor|datapath:dp|mux3:byp1mux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 129
-Info (12128): Elaborating entity "alu" for hierarchy "processor:m_processor|datapath:dp|alu:alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 134
-Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_eV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 142
-Info (12128): Elaborating entity "mux3" for hierarchy "processor:m_processor|datapath:dp|mux3:byp1muxV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 147
-Info (12128): Elaborating entity "alu_vect_2" for hierarchy "processor:m_processor|datapath:dp|alu_vect_2:aluv" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 156
-Info (12128): Elaborating entity "arr2bits" for hierarchy "processor:m_processor|datapath:dp|arr2bits:a2b_alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 159
-Info (12128): Elaborating entity "bits2arr" for hierarchy "processor:m_processor|datapath:dp|bits2arr:b2a" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 177
-Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:Result_muxV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 197
-Info (12128): Elaborating entity "eqcmp" for hierarchy "processor:m_processor|datapath:dp|eqcmp:m0" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 206
-Info (12128): Elaborating entity "hazard" for hierarchy "processor:m_processor|hazard:h" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 72
-Info (12128): Elaborating entity "hazardV" for hierarchy "processor:m_processor|hazardV:hV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 89
+Info (12128): Elaborating entity "datapath" for hierarchy "processor:m_processor|datapath:dp" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 66
+Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:pcnextmux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 63
+Info (12128): Elaborating entity "flopenr" for hierarchy "processor:m_processor|datapath:dp|flopenr:pcreg" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 65
+Info (12128): Elaborating entity "adder" for hierarchy "processor:m_processor|datapath:dp|adder:pcadd" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 66
+Info (12128): Elaborating entity "flopenrc" for hierarchy "processor:m_processor|datapath:dp|flopenrc:instrreg" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 73
+Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:ra1_mux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 80
+Info (12128): Elaborating entity "regfile" for hierarchy "processor:m_processor|datapath:dp|regfile:rf" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 91
+Info (12128): Elaborating entity "extend" for hierarchy "processor:m_processor|datapath:dp|extend:ext" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 93
+Info (12128): Elaborating entity "RegV" for hierarchy "processor:m_processor|datapath:dp|RegV:rfv" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 117
+Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_e" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 121
+Info (12128): Elaborating entity "mux3" for hierarchy "processor:m_processor|datapath:dp|mux3:byp1mux" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 131
+Info (12128): Elaborating entity "alu" for hierarchy "processor:m_processor|datapath:dp|alu:alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 136
+Info (12128): Elaborating entity "flopr" for hierarchy "processor:m_processor|datapath:dp|flopr:rd1d_eV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 144
+Info (12128): Elaborating entity "mux3" for hierarchy "processor:m_processor|datapath:dp|mux3:byp1muxV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 149
+Info (12128): Elaborating entity "alu_vect_2" for hierarchy "processor:m_processor|datapath:dp|alu_vect_2:aluv" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 158
+Info (12128): Elaborating entity "arr2bits" for hierarchy "processor:m_processor|datapath:dp|arr2bits:a2b_alu" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 161
+Info (12128): Elaborating entity "bits2arr" for hierarchy "processor:m_processor|datapath:dp|bits2arr:b2a" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 179
+Info (12128): Elaborating entity "mux2" for hierarchy "processor:m_processor|datapath:dp|mux2:Result_muxV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 199
+Info (12128): Elaborating entity "eqcmp" for hierarchy "processor:m_processor|datapath:dp|eqcmp:m0" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/datapath.sv Line: 208
+Info (12128): Elaborating entity "hazard" for hierarchy "processor:m_processor|hazard:h" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 73
+Info (12128): Elaborating entity "hazardV" for hierarchy "processor:m_processor|hazardV:hV" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/processor.sv Line: 90
 Info (12128): Elaborating entity "imem" for hierarchy "imem:instructions_mem" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/top.sv Line: 26
-Warning (10850): Verilog HDL warning at imem.sv(7): number of words (11) in memory file does not match the number of elements in the address range [0:264] File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 7
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (5) in memory file does not match the number of elements in the address range [0:264] File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 7
 Warning (10030): Net "ROM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
 Warning (10030): Net "ROM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
 Warning (10030): Net "ROM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv Line: 4
@@ -1286,11 +1289,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (12128): Elaborating entity "mux_lkb" for hierarchy "ramvectorial:data_mem|altsyncram:altsyncram_component|altsyncram_9bt2:auto_generated|mux_lkb:mux5" File: C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/db/altsyncram_9bt2.tdf Line: 55
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/output_files/top.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4956 megabytes
-    Info: Processing ended: Sat Apr 06 23:02:00 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:34
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Sun Apr 07 20:41:37 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:43
 
 
 +--------------------------------------------+
