@@ -27,6 +27,8 @@ vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/mux3.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/eqcmp.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/alu_vect_2.sv}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/hazardV.sv}
+vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/bits2arr.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/instvecorscalar.sv}
 vlog -sv -work work +incdir+C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador {C:/Users/Jonathan/Desktop/AudioSIMD-FIR-1/Procesador/imem.sv}
 

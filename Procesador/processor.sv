@@ -20,6 +20,12 @@ module processor(	input logic clk, reset,
 	logic StallF, StallD, FlushD, FlushE;
 	logic Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E;
 	
+	//Vectorial 
+	logic Match_1E_MV, Match_1E_WV, Match_2E_MV, Match_2E_WV, Match_12D_EV;
+	logic StallFV, StallDV, FlushEV;
+	logic [1:0] ForwardAEV, ForwardBEV;
+
+	
 	instVecOrScalar i(.InstSelec(InstrF[28]),
 					 .Inst(InstrF),
 					 .InstS(InstrFRes),
@@ -39,7 +45,7 @@ module processor(	input logic clk, reset,
 					wren_b,
 					MemtoRegWV, RegWriteWV,
 					RegWriteMV, MemtoRegEV,
-					FlushE);
+					FlushEV);
 					
 						
 	datapath dp(clk, reset,
@@ -53,6 +59,8 @@ module processor(	input logic clk, reset,
 					ALUFlagsE, ALUFlagsEV,
 					Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E,
 					ForwardAE, ForwardBE, StallF, StallD, FlushD,
+					Match_1E_MV, Match_1E_WV, Match_2E_MV, Match_2E_WV, Match_12D_EV,
+					ForwardAEV, ForwardBEV, StallFV, StallDV,
 					LEDs,
 					Switches);
 					
@@ -62,5 +70,22 @@ module processor(	input logic clk, reset,
 				PCWrPendingF, PCSrcW,
 				ForwardAE, ForwardBE,
 				StallF, StallD, FlushD, FlushE);
+				
+	hazardV hV( .clk(clk), 
+					.reset(reset),
+				   .Match_1E_M(Match_1E_MV), 
+					.Match_1E_W(Match_1E_WV), 
+					.Match_2E_M(Match_2E_MV),
+					.Match_2E_W(Match_2E_WV), 
+					.Match_12D_E(Match_12D_EV),
+					.RegWriteM(RegWriteMV), 
+					.RegWriteW(RegWriteWV),
+					.MemtoRegE(MemtoRegEV),
+					.ForwardAE(ForwardAEV), 
+					.ForwardBE(ForwardBEV),
+					.StallF(StallFV), 
+					.StallD(StallDV),
+					.FlushE(FlushEV)
+					);
 
 endmodule

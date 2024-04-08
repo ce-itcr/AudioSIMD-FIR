@@ -1,12 +1,11 @@
-module hazard(	input logic clk, reset,
+module hazardV(input logic clk, reset,
 					input logic Match_1E_M, Match_1E_W, Match_2E_M,
 					Match_2E_W, Match_12D_E,
 					input logic RegWriteM, RegWriteW,
-					input logic BranchTakenE, MemtoRegE,
-					input logic PCWrPendingF, PCSrcW,
+					input logic MemtoRegE,
 					output logic [1:0] ForwardAE, ForwardBE,
 					output logic StallF, StallD,
-					output logic FlushD, FlushE);
+					output logic FlushE);
 					
 	logic ldrStallD;
 	
@@ -22,11 +21,11 @@ module hazard(	input logic clk, reset,
 	end
 	
 	// stalls / flushes
+	
 	assign ldrStallD = Match_12D_E & MemtoRegE;
 	assign StallD = ldrStallD;
-	assign StallF = ldrStallD | PCWrPendingF;
-	assign FlushE = ldrStallD | BranchTakenE;
-	assign FlushD = PCWrPendingF | PCSrcW | BranchTakenE;
+	assign StallF = ldrStallD;
+	assign FlushE = ldrStallD;
 
 
 	
