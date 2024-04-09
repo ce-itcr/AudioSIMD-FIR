@@ -1,7 +1,7 @@
 import numpy as np
 import binascii
 
-MAX_SIZE = 524288  # RAM size
+MAX_SIZE = 130048  # RAM size
 header_size = 151
 
 
@@ -14,7 +14,7 @@ def save_header(header):
 ## Genera el archivo .mif para cargar los datos del audio en memoria
 def generate_mif_file(audio_data_array):
     audio_length = len(audio_data_array)
-    sigle_file_size = int(audio_length / 2)
+    sigle_file_size = int(audio_length)
 
     string_datos = "-- Audio Generado\n\n"
     string_datos += "WIDTH=" + str(8) + ";\n" + "DEPTH=" + str(MAX_SIZE) + ";\n\n"
@@ -133,15 +133,15 @@ def save_wav(filename, data):
 
 
 def generate_mif():
-    normal = get_bytes_from_file("audio/Back_In_Black_7s.wav")
-    reverb = get_bytes_from_file("audio/Reverb.wav")
+    normal = get_bytes_from_file("audio/Back_In_Black_5s.wav")
+    #reverb = get_bytes_from_file("audio/Reverb.wav")
 
     header = normal[0:header_size]
     save_header(header)
     normal = normal[header_size:]
-    reverb = reverb[header_size:]
+    #reverb = reverb[header_size:]
 
-    generate_mif_file(normal + reverb)
+    generate_mif_file(normal)
 
 
 def fpga_result(mif_file, wav_file):
@@ -156,11 +156,11 @@ def simulation_result(mif_file, wav_file):
 
 # Tests
 
-#generate_mif()
+generate_mif()
 
 # FPGA results
 #fpga_result("mifs/fpga_memory_dereverb.mif", "audio/ResultFPGA_Dereverb.wav")
-fpga_result("mifs/fpga_memory_reverb.mif", "audio/ResultFPGA_Reverb.wav")
+#fpga_result("mifs/fpga_memory_reverb.mif", "audio/ResultFPGA_Reverb.wav")
 
 # Simulation results
 #simulation_result("mifs/simulation_memory_reverb.mem", "audio/ResultSim_Reverb.wav")

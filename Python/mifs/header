@@ -5,5 +5,5 @@ sample_rate -i 22050
 sample_coding -s3 pcm
 sample_n_bytes -i 1
 sample_sig_bits -i 8
-sample_count -i 154944
+sample_count -i 110253
 end_head
