@@ -8,7 +8,7 @@ module testbench();
 	// instantiate device to be tested
 	top dut(clk, reset, LEDs, Switches);
 	
-	assign Switches = 3'b001;
+	assign Switches = 3'b111;
 	
 	// initialize test
 	initial

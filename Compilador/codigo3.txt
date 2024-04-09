@@ -1,0 +1,20 @@
+j main 
+
+main:
+    set x23 1 
+    lw x4 x0 0 
+    sw x4 x0 32 
+    addi x1 x1 0 
+    lv x1 x1 0 
+    lv x2 x1 1 
+    mvv x3 x1 x2 
+    svr x4 x1 x2 
+    svl x5 x1 x2 
+    sva x6 x1 x2 
+    sv x6 x1 3 
+    addi x1 x1 88 
+    addi x2 x2 88 
+    addi x3 x3 88 
+    set x23 0 
+
+

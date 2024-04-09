@@ -4,14 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LEDs[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDs[7]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDs[0]",
 					"strict" : false
 				},
@@ -36,11 +28,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "LEDs[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[7]",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "push",
+					"strict" : false
+				},
+				{
+					"name" : "ena_switch",
 					"strict" : false
 				},
 				{

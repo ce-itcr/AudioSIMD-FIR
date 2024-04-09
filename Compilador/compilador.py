@@ -232,6 +232,8 @@ def jumps(parameter, count):
 
     inst += "00000"
 
+    print("Label ", label)
+
     for info_label in addrlabel:
         if info_label[0] == label:
             # imm = dir_etiqueta - (dir_instruc + 2)

@@ -4,6 +4,7 @@ j main
 wait:
 
     set x6 1 
+    sw x29 x2 1 
     comp x30 x6 
     jeq add 
     j wait 
@@ -20,7 +21,8 @@ zero:
 main:
     
     set x29 1 
+    sw x29 x2 0 
     comp x29 x30 
     jeq wait 
-
+    j main 
  

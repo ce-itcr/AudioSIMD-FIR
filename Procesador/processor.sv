@@ -24,12 +24,14 @@ module processor(	input logic clk, reset,
 	logic Match_1E_MV, Match_1E_WV, Match_2E_MV, Match_2E_WV, Match_12D_EV;
 	logic StallFV, StallDV, FlushEV;
 	logic [1:0] ForwardAEV, ForwardBEV;
-
+	
+	
 	
 	instVecOrScalar i(.InstSelec(InstrF[28]),
 					 .Inst(InstrF),
 					 .InstS(InstrFRes),
 					 .InstV(InstrFResV));
+	
 	
 	controller c(clk, reset, InstrD[31:29], InstrD[28:25], InstrD[24:20], ALUFlagsE,
 						RegSrcD, ImmSrcD,
@@ -63,7 +65,8 @@ module processor(	input logic clk, reset,
 					ForwardAEV, ForwardBEV, StallFV, StallDV,
 					LEDs,
 					Switches,
-					InstrFRes[31:29]);
+					InstrF[31:29], 
+					InstrF);
 					
 	
 	hazard h(clk, reset, Match_1E_M, Match_1E_W, Match_2E_M, Match_2E_W, Match_12D_E,
