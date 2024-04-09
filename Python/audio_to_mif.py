@@ -1,9 +1,11 @@
 import numpy as np
 import binascii
 
+#111126 muestras
 MAX_SIZE = 130048  # RAM size
 header_size = 151
-
+vector_b = ['05', 'FD', '0E', '11', '06', '04', '03', '0A', '16', '05', '0D', '0C', 'FF', '0A', '02', 'FE']
+vector_b2 = ['05', 'FD', '0E', '11', '06', '04', '03', '0A', '00', '00', '00', '00', '00', '00', '00', '00']
 
 def save_header(header):
     with open("mifs/header", "wb") as header_file:
@@ -26,14 +28,28 @@ def generate_mif_file(audio_data_array):
     string_datos += (
         "   " + str(2) + " : " + "0" + str(hex(sigle_file_size)[2:3]) + ";\n"
     )
+    string_datos += "   " + str(3) + " : " + str(hex(round(sigle_file_size/16))[4:6]) + ";\n"
+    string_datos += "   " + str(4) + " : " + str(hex(round(sigle_file_size/16))[2:4]) + ";\n"
+    #Se rellenan con 0's los espacios faltantes del primer vector
+    for i in range(12):
+        string_datos += "   " + str(i+4) + " : " + "00" + ";\n"
+    #Se define el vector de 8's para los shifts
+    for i in range(16):
+        string_datos += "   " + str(i+16) + " : " + "08" + ";\n"
+    #Se guarda el vector b para el caso b=n
+    for i in range(16):
+        string_datos += "   " + str(i+32) + " : " + vector_b[i] + ";\n"
+    #Se guarda el vector b para el caso b<n
+    for i in range(16):
+        string_datos += "   " + str(i+48) + " : " + vector_b2[i] + ";\n"        
 
     for i in range(audio_length):
-        string_datos += "   " + str(i + 3) + " : "
+        string_datos += "   " + str(i + 64) + " : "
         string_datos += str(audio_data_array[i].hex()).upper() + ";\n"
 
     if audio_length < MAX_SIZE:
         string_datos += (
-            "[" + str(audio_length + 3) + ".." + str(MAX_SIZE - 1) + "] : 00 ; \n"
+            "[" + str(audio_length + 64) + ".." + str(MAX_SIZE - 1) + "] : 00 ; \n"
         )
 
     string_datos += "END;\n"
