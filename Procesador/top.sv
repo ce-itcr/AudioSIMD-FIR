@@ -27,7 +27,7 @@ module top(	input logic clk, push, reset, ena_switch,
 	
 	
 	imem instructions_mem(PCF, instruction_f);
-	ram ram_debug(DataAdrE[18:0], clk, WriteDataE[7:0], MemWriteE, q_debug);
-	ramvectorial data_mem(DataAdrE[18:0], DataAdrE[18:0], clk,  WriteDataE[7:0], data_b, MemWriteE, wren_b,  ReadDataM[7:0], q_b);
+	ram ram_debug(DataAdrE[16:0], clk, WriteDataE[7:0], MemWriteE, q_debug);
+	ramvectorial data_mem(DataAdrE[16:0], DataAdrE[13:0], clk,  WriteDataE[7:0], data_b, MemWriteE, wren_b,  ReadDataM[7:0], q_b);
 	
 endmodule

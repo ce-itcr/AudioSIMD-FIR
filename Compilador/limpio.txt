@@ -1,19 +1,16 @@
 j main 
-wait:
-    set x6 1 
-    sw x29 x2 1 
-    comp x30 x6 
-    jeq add 
-    j wait 
-add:
-    addi x29 x29 1 
-zero:
-    comp x30 x0 
-    jeq wait 
-    j zero 
 main:
-    set x29 1 
-    sw x29 x2 0 
-    comp x29 x30 
-    jeq wait 
-    j main 
+    set x23 1 
+    lw x4 x0 0 
+    sw x4 x0 48 
+    addi x1 x1 0 
+    lv x1 x1 0 
+    lv x2 x1 1 
+    lv x3 x1 2 
+    mvv x4 x1 x2 
+    sva x5 x4 x2 
+    mvv x6 x1 x3 
+    sva x7 x6 x2 
+    sv x5 x1 4 
+    sv x7 x1 5 
+    set x23 0 

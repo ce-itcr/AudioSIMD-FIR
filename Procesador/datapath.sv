@@ -31,14 +31,14 @@ module datapath(	input logic clk, reset,
 	// Decode
 	logic [31:0] ExtImmD, PCPlus8D, RD1D, RD2D;
 	logic [4:0] RA1D, RA2D, RA1DV, RA2DV;
-	logic [15:0][7:0] RD1DV, RD2DV;
+	logic [15:0][31:0] RD1DV, RD2DV;
 
 	
 	// Execute
 	logic [31:0] RD1E, RD2E, ExtImmE, ALUOutM, WriteDataM, SrcAE, SrcBE;
 	logic [4:0] RA1E, RA2E, WA3E, RA1EV, RA2EV, WA3EV;
-	logic [15:0][7:0] RD1EV, RD2EV, AluResE, SrcAEV, SrcBEV, ALUOutMVArr;
-	logic [127:0] AluResEBit, ALUOutMV;
+	logic [15:0][31:0] RD1EV, RD2EV, SrcAEV, SrcBEV, ALUOutMVArr, AluResE;
+	logic [511:0] AluResEBit, ALUOutMV;
 
 	
 	// Mem
@@ -47,8 +47,8 @@ module datapath(	input logic clk, reset,
 	
 	// WriteBack
 	logic [31:0] ReadDataW, ALUOutW, ResultW;
-	logic [127:0] q_b_W, ALUOutWV, ResultWV;
-	logic [15:0][7:0] ResultWVArr;
+	logic [511:0] q_b_temp, q_b_W, ALUOutWV, ResultWV;
+	logic [15:0][31:0] ResultWVArr;
 	logic [4:0] WA3W, WA3WV;
 	
 	
@@ -71,8 +71,8 @@ module datapath(	input logic clk, reset,
 	// Decode stage
 	assign PCPlus8D = PCPlus4F; // skip register
 	
-	flopenrc #(32) instrreg(clk, reset, ~StallD, FlushD, InstrF, InstrD);
-	flopenrc #(32) instrregV(clk, reset, ~StallDV, 0, InstrFV, InstrDV);
+	flopenrc #(32) instrreg(clk, reset, ~StallD & ~StallDV, FlushD, InstrF, InstrD);
+	flopenrc #(32) instrregV(clk, reset, ~StallD & ~StallDV, 0, InstrFV, InstrDV);
 
 	
 	mux2 #(5) ra1_mux(InstrD[19:15], // Rs
@@ -108,7 +108,7 @@ module datapath(	input logic clk, reset,
 						RegSrcDV[1], 
 						RA2DV);
 						
-	RegV #(32, 16, 8, 5) rfv (
+	RegV #(32, 16, 32, 5) rfv (
         .clk(clk),
         .we3(RegWriteWV),
         .ra1(RA1DV),
@@ -144,15 +144,15 @@ module datapath(	input logic clk, reset,
 	flopr #(5) wa3d_eV(clk, reset, InstrDV[24:20], WA3EV);
 
 	
-	flopr #(128) rd1d_eV(clk, reset, RD1DV, RD1EV);
-	flopr #(128) rd2d_eV(clk, reset, RD2DV, RD2EV);
+	flopr #(512) rd1d_eV(clk, reset, RD1DV, RD1EV);
+	flopr #(512) rd2d_eV(clk, reset, RD2DV, RD2EV);
 	flopr #(5) ra1d_eV(clk, reset, RA1DV, RA1EV);
 	flopr #(5) ra2d_eV(clk, reset, RA2DV, RA2EV);
 	
-	mux3 #(128) byp1muxV(RD1EV, ResultWVArr, ALUOutMVArr, ForwardAEV, SrcAEV);
-	mux3 #(128) byp2muxV(RD2EV, ResultWVArr, ALUOutMVArr, ForwardBEV, SrcBEV);
+	mux3 #(512) byp1muxV(RD1EV, ResultWVArr, ALUOutMVArr, ForwardAEV, SrcAEV);
+	mux3 #(512) byp2muxV(RD2EV, ResultWVArr, ALUOutMVArr, ForwardBEV, SrcBEV);
 	
-	alu_vect_2 #(8, 16) aluv(
+	alu_vect_2 #(32, 16) aluv(
         .a(SrcAEV),
         .b(SrcBEV),
         .ctrl(ALUControlEV),
@@ -163,7 +163,7 @@ module datapath(	input logic clk, reset,
 	 arr2bits a2b_alu(.alu_res(AluResE),
 					      .bit_res(AluResEBit));
 					  
-	 arr2bits a2b_reg2(.alu_res(SrcBEV),
+	 arr2bits4mem a2b_reg2(.alu_res(SrcBEV),
 							 .bit_res(data_b));
 	
 	
@@ -176,7 +176,7 @@ module datapath(	input logic clk, reset,
 		
 	//Vectorial
 	
-	flopr #(128) AluResult_regV(clk, reset, AluResEBit, ALUOutMV);
+	flopr #(512) AluResult_regV(clk, reset, AluResEBit, ALUOutMV);
 	
 	bits2arr b2a( .ResultV(ALUOutMV),
 			  .a_res(ALUOutMVArr)); 
@@ -195,11 +195,15 @@ module datapath(	input logic clk, reset,
 	mux2 #(32) Result_mux(ALUOutW, ReadDataW, MemtoRegW, ResultW);
 	
 	//Vectorial
-	flopr #(128) AluOutM_WV(clk, reset, ALUOutMV, ALUOutWV);
-	flopr #(128) ReadDataM_WV(clk, reset, q_b, q_b_W);
+	flopr #(512) AluOutM_WV(clk, reset, ALUOutMV, ALUOutWV);
+	
+	bits2arr4mem b2a4m( .ResultV(q_b),
+							  .a_res(q_b_temp)); 
+			  
+	flopr #(512) ReadDataM_WV(clk, reset, q_b_temp, q_b_W);
 	flopr #(5) wa3m_wV(clk, reset, WA3MV, WA3WV);
-
-	mux2 #(128) Result_muxV(ALUOutWV, q_b_W, MemtoRegWV, ResultWV);
+	
+	mux2 #(512) Result_muxV(ALUOutWV, q_b_W, MemtoRegWV, ResultWV);
 	
 	bits2arr b2a2( .ResultV(ResultWV),
 				  .a_res(ResultWVArr));  
