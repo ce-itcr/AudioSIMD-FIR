@@ -10,7 +10,7 @@ module testbench();
     // instantiate device to be tested
     top dut(clk, push, reset, ena_switch, LEDs, Switches);
 
-    assign Switches = 3'b111;
+    assign Switches = 3'b001;
     assign ena_switch = 0; //Clock de FPGA 50 MHz
     assign push = 0; //No importa
 

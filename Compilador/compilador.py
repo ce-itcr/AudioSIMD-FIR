@@ -1,4 +1,4 @@
-code = open("codigo3.txt")
+code = open("codigoFRI.txt")
 limpio = open("limpio.txt", "w")
 ensamblador = open("ensamblador.txt", "w")
 codigohexadecimal = open("../Procesador/simulation/modelsim/instructions.dat", "w")

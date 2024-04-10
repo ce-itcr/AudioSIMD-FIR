@@ -139,10 +139,12 @@ def get_audio_file_size(data):
 
 def save_wav(filename, data):
     size = get_audio_file_size(data)
+    print(size)
+    print(len(data))
     header = get_bytes_from_file("mifs/header")
 
     result_data = header
-    for i in range(size * 2, size * 3):
+    for i in range(len(data)):
         result_data.append(data[i])
 
     save_bytes_to_file(filename, result_data)
@@ -172,10 +174,10 @@ def simulation_result(mif_file, wav_file):
 
 # Tests
 
-generate_mif()
+#generate_mif()
 
 # FPGA results
-#fpga_result("mifs/fpga_memory_dereverb.mif", "audio/ResultFPGA_Dereverb.wav")
+fpga_result("mifs/FPGA_HOY.mif", "audio/ResultFPGA_HOY.wav")
 #fpga_result("mifs/fpga_memory_reverb.mif", "audio/ResultFPGA_Reverb.wav")
 
 # Simulation results

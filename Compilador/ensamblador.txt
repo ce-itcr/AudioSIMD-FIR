@@ -1,15 +1,69 @@
 j main 
+    set x29 1 
+    set x6 1 
+    set x7 3 
+    set x8 5 
+    comp x30 x6 
+    jeq fir1 
+    j wait 
     set x23 1 
-    lw x4 x0 0 
-    sw x4 x0 48 
-    addi x1 x1 0 
-    lv x1 x1 0 
-    lv x2 x1 1 
-    lv x3 x1 2 
-    mvv x4 x1 x2 
-    sva x5 x4 x2 
-    mvv x6 x1 x3 
-    sva x7 x6 x2 
-    sv x5 x1 4 
-    sv x7 x1 5 
+    set x29 2 
+    set x9 0 
+    set x11 0  
+    set x3 16 
+    lv x1 x0 1 
+    lv x2 x0 2 
+    addi x10 x9 4 
+    addi x12 x11 64 
+    lv x3 x10 0 
+    mvv x4 x2 x3 
+    sva x4 x4 x1 
+    sv x4 x10 0 
+    addi x5 x21 1 
+    lw x13 x12 0 
+    sw x13 x12 0 
+    lw x13 x12 0 
+    lw x14 x12 1 
+    add x14 x14 x13 
+    sw x14 x12 1 
+    addi x12 x12 1 
+    addi x5 x5 1 
+    comp x5 x3 
+    jlt loop_y 
+    addi x9 x9 1 
+    addi x11 x11 16 
+    comp x11 x1 
+    jlt fir1_loop 
     set x23 0 
+    set x29 255 
+    set x6 0 
+    set x7 2 
+    set x8 4 
+    comp x30 x6 
+    jeq wait 
+    comp x30 x7 
+    jeq wait 
+    comp x30 x8 
+    jeq wait 
+    comp x30 x8 
+    jneq finished 
+    set x29 0 
+    lw x1 x0 0 
+    lw x2 x0 1 
+    lw x3 x0 2 
+    slli x1 x1 24 
+    slli x2 x2 24 
+    slli x3 x3 24 
+    slri x1 x1 24 
+    slri x2 x2 16 
+    slri x3 x3 8 
+    add x1 x1 x2 
+    add x1 x1 x3 
+    lw x4 x0 3 
+    lw x5 x0 4 
+    slli x4 x4 24 
+    slli x5 x5 24 
+    slri x4 x4 24 
+    slri x5 x5 16 
+    add x4 x4 x5 
+    j wait 

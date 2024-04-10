@@ -147,7 +147,7 @@ nCSO, DATA4                  : AB8       :        :                   :         
 altera_reserved_tdo          : AB9       : output : 2.5 V             :         : 3A        : N              
 VCCPGM                       : AB10      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VCC_AUX                      : AB11      : power  :                   : 2.5V    :           :                
-ena_switch                   : AB12      : input  : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3B        :                
 VCCIO3B                      : AB14      : power  :                   : 2.5V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 3B        :                
@@ -205,7 +205,7 @@ VREFB3AN0                    : AD6       : power  :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 3A        :                
 VCCIO3A                      : AD8       : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD9       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 3A        :                
+ena_switch                   : AD10      : input  : 2.5 V             :         : 3A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3A        :                
 VCCIO3B                      : AD13      : power  :                   : 2.5V    : 3B        :                
