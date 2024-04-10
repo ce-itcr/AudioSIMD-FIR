@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at controllerV.sv(38): extended using "x" or "z" File: C:/Users/XT/Desktop/AudioSIMD-FIR/Procesador/controllerV.sv Line: 38
+Warning (10273): Verilog HDL warning at controller.sv(44): extended using "x" or "z" File: C:/Users/XT/Desktop/AudioSIMD-FIR/Procesador/controller.sv Line: 44

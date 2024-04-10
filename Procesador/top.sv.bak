@@ -1,0 +1,28 @@
+module top(	input logic clk, reset, 
+				output logic [7:0] LEDs,
+				input logic [2:0] Switches);
+	
+	logic [31:0] PCF, instruction_f, WriteDataE, DataAdrE, ReadDataM;
+	logic MemWriteE;
+	
+	
+	assign ReadDataM[31:8] = {24{ReadDataM[7]}};
+	
+
+	processor m_processor(clk, reset, PCF,
+								instruction_f,
+								MemWriteE,
+								DataAdrE,
+								WriteDataE,
+								ReadDataM,
+								LEDs,
+								Switches);
+	
+	
+	imem instructions_mem(PCF, instruction_f);
+	
+	
+	ram data_mem(DataAdrE[18:0], clk, WriteDataE[7:0], MemWriteE, ReadDataM[7:0]);
+	
+	
+endmodule

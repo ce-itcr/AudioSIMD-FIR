@@ -1,0 +1,39 @@
+
+j main 
+
+wait:
+
+    set x6 1 
+    //sw x29 x2 1 
+    lv x4 x1 0 
+    comp x30 x6 
+    jeq add 
+    j wait 
+
+add:
+
+    // x5:Dato 
+    lw x5 x2 0 
+    // Sume al dato lo que tiene leds
+    add x5 x5 x29 
+    // Actualice leds
+    addi x29 x29 1 
+    // Guarde en pos mem 0 lo que tiene x5 
+    sw x5 x2 0 
+    // Actualice contador muestras
+    addi x2 x2 1 
+
+zero:
+
+    comp x30 x0 
+    jeq wait 
+    j zero 
+
+main:
+    
+    set x29 1 
+    set x3 1 
+    comp x29 x30 
+    jeq wait 
+    j main 
+ 

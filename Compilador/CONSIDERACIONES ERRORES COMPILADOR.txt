@@ -1,0 +1,7 @@
+1. Poner un espacio al final de cada instrucción para que lo lea bien.
+2. primer instrucción debe ser un jump a main.
+3. Los label de los branches
+4. Revisar bien la sintaxis de instrucciones por aquello (Green Card)
+5. Para el set después de una operación vectorial usar otro registro que no sea x0 
+
+*** Que compile el codigo NO SIGNIFICA NECESARIAMENTE que vaya a correrlo bien.
