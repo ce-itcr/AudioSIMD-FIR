@@ -37,10 +37,10 @@ fir1:
 
     // load vector for arithmetics shifts
     // offset of 16 bytes (due to data size) x1: Vector 8's 
-    lv x1 x0 1 
+    lv x1 x21 1 
     // load vector b
     // offset of 16 bytes (due to shifts vector) x2: Vector b = N
-    lv x2 x0 2 
+    lv x2 x21 2 
 
 
 
@@ -108,6 +108,12 @@ finished:
 
     //End counting Cycles/Instructions
     set x23 0 
+
+    // Guarde el reg 24 en la posicion 6 
+    // Guarde el reg 25 en la posicion 7 
+    // Guarde el reg 27 en la posicion 8 
+    // Guarde el reg 28 en la posicion 9 
+    // Guarde el reg 29 en la posicion 10 
 
     // turn on leds
     set x29 255 

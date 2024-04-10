@@ -23,7 +23,7 @@ module top(	input logic clk, push, reset, ena_switch,
 								ReadDataM,
 								q_b,
 								LEDs,
-								Switches);
+								~Switches);
 	
 	
 	imem instructions_mem(PCF, instruction_f);

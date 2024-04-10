@@ -130,9 +130,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE hazardV.sv
 set_global_assignment -name SYSTEMVERILOG_FILE bits2arr.sv
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AE12 -to reset
-set_location_assignment PIN_AC12 -to Switches[0]
-set_location_assignment PIN_AF9 -to Switches[1]
-set_location_assignment PIN_AF10 -to Switches[2]
+set_location_assignment PIN_AA15 -to Switches[0]
+set_location_assignment PIN_W15 -to Switches[1]
+set_location_assignment PIN_Y16 -to Switches[2]
 set_location_assignment PIN_V16 -to LEDs[0]
 set_location_assignment PIN_W16 -to LEDs[1]
 set_location_assignment PIN_V17 -to LEDs[2]

@@ -11,9 +11,9 @@ LEDs[4] <= processor:m_processor.port11
 LEDs[5] <= processor:m_processor.port11
 LEDs[6] <= processor:m_processor.port11
 LEDs[7] <= processor:m_processor.port11
-Switches[0] => Switches[0].IN1
-Switches[1] => Switches[1].IN1
-Switches[2] => Switches[2].IN1
+Switches[0] => _.IN1
+Switches[1] => _.IN1
+Switches[2] => _.IN1
 
 
 |top|mux2:branchmux
